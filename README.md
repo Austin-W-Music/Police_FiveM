@@ -1,7 +1,7 @@
-# Cops_FiveM
+# Police_FiveM
 [![GitHub release](https://img.shields.io/github/release/FiveM-Scripts/Cops_FiveM.svg)](https://github.com/FiveM-Scripts/Cops_FiveM/releases/latest) [![GitHub license](https://img.shields.io/github/license/FiveM-Scripts/Cops_FiveM.svg)](https://github.com/FiveM-Scripts/Cops_FiveM/blob/master/LICENSE)
 
-Cops_FiveM is a resource mainly for RP servers. It gives servers a cops system with loadouts, vehicles, fines, ...    
+Police_FiveM is a resource mainly for RP servers. It gives servers a cops system with loadouts, vehicles, fines, ...    
 You can find a complete overview with all the features [here](docs/features.md).
 
 ## Changelog
@@ -30,7 +30,7 @@ In case you are using **ZAP-Hosting** and don't know what your database name/use
 you can do this in your server console enter `CopAddAdmin 1` or `CopAdd 1` press **enter** and you should receive a confirmation message.
 
 ## Commands
-You can use these commands with RCON (`CopAdd` / `CopAddAdmin` / `CopDept`/ `CopRem` / `CopRank`).    
+You can use these commands with RCON (`PoliceAdd` / `PoliceAddAdmin` / `PoliceDept`/ `PoliceRem` / `PoliceRank`).    
 To see how to use them, just type the command you want without any parameter.
 
 ## Departments
@@ -38,9 +38,11 @@ To see how to use them, just type the command you want without any parameter.
 | -- | ---- |
 | 0  | Park Rangers |
 | 1  | Los Santos Police Department|
-| 2  | Sheriff's Department |
-| 3  | State Highway Patrol |
-| 4  | Prison Department|
+| 2  | Blaine County Sheriff's Office |
+| 3  | San Andreas State Police |
+| 4  | Prison Department |
+| 5  | Correctional Department |
+| 6  | Probation Department |
 
 ## Ranks
 | ID | Name |
