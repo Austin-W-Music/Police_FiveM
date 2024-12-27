@@ -1,6 +1,6 @@
 --[[
-            Cops_FiveM - A cops script for FiveM RP servers.
-              Copyright (C) 2018 FiveM-Scripts
+            Police_FiveM - A cops script for FiveM RP servers.
+              Copyright (C) 2018 DevAustin
               
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published by
@@ -11,7 +11,7 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU Affero General Public License for more details.
 You should have received a copy of the GNU Affero General Public License
-along with Cops_FiveM in the file "LICENSE". If not, see <http://www.gnu.org/licenses/>.
+along with Police_FiveM in the file "LICENSE". If not, see <http://www.gnu.org/licenses/>.
 ]]
 
 
@@ -23,15 +23,15 @@ if config.useCopWhitelist then
 end
 
 if GetResourceMetadata(GetCurrentResourceName(), 'resource_Isdev', 0) == "yes" then
-	RconPrint("/!\\ You are running a dev version of Cops FiveM !\n")
+	RconPrint("/!\\ You are running a dev version of Police FiveM !\n")
 end
 
 if config.enableVersionNotifier then
-	PerformHttpRequest("https://raw.githubusercontent.com/FiveM-Scripts/Cops_FiveM/master/police/fxmanifest.lua", function(errorCode, result, headers)
+	PerformHttpRequest("https://raw.githubusercontent.com/Austin-W-Music/Police_FiveM/master/police/fxmanifest.lua", function(errorCode, result, headers)
 		local version = GetResourceMetadata(GetCurrentResourceName(), 'version', 0)
 
 		if string.find(tostring(result), version) == nil then
-			print("\n\r[Cops_FiveM] The version on this server is not up to date. Please update now.\n\r")
+			print("\n\r[Police_FiveM] The version on this server is not up to date. Please update now.\n\r")
 		end
 	end, "GET", "", "")
 end
@@ -224,7 +224,7 @@ end)
 RegisterServerEvent('police:UpdateNotifier')
 AddEventHandler('police:UpdateNotifier', function()
 	local src = source
-	PerformHttpRequest("https://raw.githubusercontent.com/FiveM-Scripts/Cops_FiveM/master/police/__resource.lua", function(errorCode, result, headers)
+	PerformHttpRequest("https://raw.githubusercontent.com/Austin-W-Music/Police_FiveM/master/police/__resource.lua", function(errorCode, result, headers)
 		local version = GetResourceMetadata(GetCurrentResourceName(), 'resource_version', 0)
 		if string.find(tostring(result), version) == nil then
 			TriggerClientEvent('police:Update', src, true)
@@ -232,9 +232,9 @@ AddEventHandler('police:UpdateNotifier', function()
 	end, "GET", "", "")	
 end)
 
-RegisterCommand("CopAddAdmin", function(source,args,raw)
+RegisterCommand("PoliceAddAdmin", function(source,args,raw)
 	if #args ~= 1 then
-		RconPrint("Usage: CopAddAdmin [ingame-id]\n")
+		RconPrint("Usage: PoliceAddAdmin [ingame-id]\n")
 		CancelEvent()
 		return
 	else
@@ -268,9 +268,9 @@ RegisterCommand("CopAddAdmin", function(source,args,raw)
 	end
 end, true)
 
-RegisterCommand("CopAdd", function(source,args,raw)
+RegisterCommand("PoliceAdd", function(source,args,raw)
 	if #args ~= 1 then
-		RconPrint("Usage: CopAdd [ingame-id]\n")
+		RconPrint("Usage: PoliceAdd [ingame-id]\n")
 		CancelEvent()
 		return
 	else
@@ -297,9 +297,9 @@ RegisterCommand("CopAdd", function(source,args,raw)
 	end
 end, true)
 
-RegisterCommand("CopRem", function(source,args,raw)
+RegisterCommand("PoliceRem", function(source,args,raw)
 	if #args ~= 1 then
-		RconPrint("Usage: CopRem [ingame-id]\n")
+		RconPrint("Usage: PoliceRem [ingame-id]\n")
 		CancelEvent()
 		return
 	else
@@ -326,9 +326,9 @@ RegisterCommand("CopRem", function(source,args,raw)
 	end
 end, true)
 
-RegisterCommand("CopRank", function(source,args,raw)
+RegisterCommand("PoliceRank", function(source,args,raw)
 	if #args ~= 2 then
-		RconPrint("Usage: CopRank [ingame-id] [rank]\n")
+		RconPrint("Usage: PoliceRank [ingame-id] [rank]\n")
 		CancelEvent()
 		return
 	elseif(not config.rank.label[tonumber(args[2])]) then
@@ -357,9 +357,9 @@ RegisterCommand("CopRank", function(source,args,raw)
 	end
 end, true)
 
-RegisterCommand("CopDept", function(source,args,raw)
+RegisterCommand("PoliceDept", function(source,args,raw)
 	if #args ~= 2 then
-		RconPrint("Usage: CopDept [ingame-id] [department]\n")
+		RconPrint("Usage: PoliceDept [ingame-id] [department]\n")
 		CancelEvent()
 		return	
 	else
