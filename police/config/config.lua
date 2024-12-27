@@ -29,17 +29,21 @@ config = {
 		label = {
 			[0] = "Park Rangers",
 			[1] = "Los Santos Police Department",
-			[2] = "Sheriff's Department",
-			[3] = "State Highway Patrol",
-			[4] = "Prison Department"
+			[2] = "Blaine County Sheriff's Office",
+			[3] = "San Andreas State Troopers",
+			[4] = "Prison Department",
+			[5] = "Corrections Department",
+			[6] = "Probation Department",
 		},
 
 		minified_label = {
 			[0] = "PR",
 			[1] = "LSPD",
-			[2] = "SHR",
-			[3] = "SHP ",
+			[2] = "BCSO",
+			[3] = "SAST ",
 			[4] = "PRISON"
+			[5] = "CORDEPT",
+			[6] = "ProbDept"
 		}
 	},
 	
@@ -50,8 +54,8 @@ config = {
 		label = {
 			[0] = "Trainee", -- Ranger Rank
 			[1] = "Trainee", -- LSPD Rank
-			[2] = "Trainee", -- Sheriff Rank
-			[3] = "Trainee", -- State Highway Patrol Rank
+			[2] = "Trainee", -- BCSO Rank
+			[3] = "Trainee", -- SAST Rank
 
 			[4] = "Park Ranger",
 			[5] = "Police Officer",
