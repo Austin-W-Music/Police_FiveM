@@ -14,6 +14,7 @@ weapons = {
     {name="Micro SMG", hash="WEAPON_MICROSMG"},
 	{name="Pistol 50.", hash="WEAPON_PISTOL50"},
 	{name="Shotgun", hash="WEAPON_PUMPSHOTGUN"},
+	{name="Beanbag", hash="WEAPON_BEANBAG"},
 	{name="SMG", hash="WEAPON_SMG"},
 	{name="Smoke grenade", hash="WEAPON_SMOKEGRENADE"},
 }
